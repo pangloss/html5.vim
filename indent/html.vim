@@ -182,7 +182,7 @@ if exists('g:html_exclude_tags')
         call remove(s:tags, index(s:tags, tag))
     endfor
 endif
-let s:html_indent_tags = join(s:tags, '\|')
+let s:html_indent_tags = join(s:tags, '\|').'\|\w\+-\w\+\|\w\+-\w\+-\w\+'
 if exists('g:html_indent_tags')
     let s:html_indent_tags = s:html_indent_tags.'\|'.g:html_indent_tags
 endif
